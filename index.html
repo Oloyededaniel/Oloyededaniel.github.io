@@ -34,11 +34,12 @@
                         display: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
-                        neon: '#39FF14',
-                        indigo: '#6610F2',
-                        dark: '#000000',
-                        darker: '#000000',
-                        surface: '#0a0a0a',
+                        neon: '#2DD4BF',
+                        indigo: '#38BDF8',
+                        dark: '#0B1220',
+                        darker: '#070B14',
+                        surface: '#121A2B',
+                        muted: '#94A3B8',
                     },
                     animation: {
                         'pulse-neon': 'pulseNeon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -47,12 +48,12 @@
                     },
                     keyframes: {
                         pulseNeon: {
-                            '0%, 100%': { boxShadow: '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14' },
-                            '50%': { boxShadow: '0 0 2px #39FF14, 0 0 5px #39FF14, 0 0 8px #39FF14' },
+                            '0%, 100%': { boxShadow: '0 0 5px #2DD4BF, 0 0 10px #2DD4BF, 0 0 15px #2DD4BF' },
+                            '50%': { boxShadow: '0 0 2px #2DD4BF, 0 0 5px #2DD4BF, 0 0 8px #2DD4BF' },
                         },
                         glow: {
-                            'from': { boxShadow: '0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14' },
-                            'to': { boxShadow: '0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14' },
+                            'from': { boxShadow: '0 0 10px #2DD4BF, 0 0 20px #2DD4BF, 0 0 30px #2DD4BF' },
+                            'to': { boxShadow: '0 0 20px #2DD4BF, 0 0 30px #2DD4BF, 0 0 40px #2DD4BF' },
                         },
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
@@ -65,47 +66,47 @@
     </script>
 
     <style>
-        /* True Black Background */
+        /* Midnight Teal theme */
         body {
-            background-color: #000000;
-            color: #E0E0E0;
+            background-color: #0B1220;
+            color: #E8EEF7;
         }
 
-        /* Custom Scrollbar - Neon Green */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #000000;
+            background: #0B1220;
         }
         ::-webkit-scrollbar-thumb {
-            background: #39FF14;
+            background: #2DD4BF;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #2dd910;
+            background: #14B8A6;
         }
 
-        /* Glassmorphism - Darker for black theme, with real optical depth */
+        /* Glassmorphism */
         .glass {
-            background: linear-gradient(180deg, rgba(16, 16, 16, 0.75) 0%, rgba(8, 8, 8, 0.75) 100%);
+            background: linear-gradient(180deg, rgba(18, 26, 43, 0.8) 0%, rgba(11, 18, 32, 0.75) 100%);
             backdrop-filter: blur(16px) saturate(140%);
             -webkit-backdrop-filter: blur(16px) saturate(140%);
-            border: 1px solid rgba(57, 255, 20, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.12);
             box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.04),
-                inset 0 0 40px rgba(57, 255, 20, 0.015),
-                0 20px 40px -20px rgba(0, 0, 0, 0.6);
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                inset 0 0 40px rgba(45, 212, 191, 0.02),
+                0 20px 40px -20px rgba(0, 0, 0, 0.55);
             transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
         }
         
         .glass:hover {
-            border: 1px solid rgba(57, 255, 20, 0.3);
+            border: 1px solid rgba(45, 212, 191, 0.35);
             box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.06),
-                inset 0 0 60px rgba(57, 255, 20, 0.03),
-                0 25px 50px -20px rgba(0, 0, 0, 0.7),
-                0 0 40px -10px rgba(57, 255, 20, 0.15);
+                inset 0 1px 0 rgba(255, 255, 255, 0.07),
+                inset 0 0 60px rgba(45, 212, 191, 0.04),
+                0 25px 50px -20px rgba(0, 0, 0, 0.65),
+                0 0 40px -10px rgba(45, 212, 191, 0.18);
         }
 
         /* Atmospheric mesh glow blobs for background depth */
@@ -142,23 +143,23 @@
             width: 48px;
             height: 3px;
             border-radius: 2px;
-            background: linear-gradient(90deg, #39FF14, transparent);
+            background: linear-gradient(90deg, #2DD4BF, transparent);
         }
 
-        /* Neon Text Glow */
+        /* Accent text glow */
         .neon-text {
-            color: #39FF14;
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+            color: #2DD4BF;
+            text-shadow: 0 0 12px rgba(45, 212, 191, 0.35);
         }
         
         .neon-border {
-            border: 1px solid #39FF14;
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+            border: 1px solid #2DD4BF;
+            box-shadow: 0 0 10px rgba(45, 212, 191, 0.25);
         }
 
-        /* Gradient Text - Neon Green to White */
+        /* Gradient Text */
         .gradient-text {
-            background: linear-gradient(135deg, #39FF14 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #2DD4BF 0%, #E8EEF7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -172,16 +173,16 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.55;
         }
 
         /* Typewriter Cursor */
         .cursor {
             display: inline-block;
             width: 3px;
-            background-color: #39FF14;
+            background-color: #2DD4BF;
             animation: blink 1s infinite;
-            box-shadow: 0 0 10px #39FF14;
+            box-shadow: 0 0 10px #2DD4BF;
         }
         
         @keyframes blink {
@@ -189,24 +190,24 @@
             51%, 100% { opacity: 0; }
         }
 
-        /* Project Card Hover - layered 3D depth via pointer tilt */
+        /* Project Card Hover */
         .project-card {
             transition: transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(57, 255, 20, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.1);
             transform-style: preserve-3d;
             will-change: transform;
         }
         .project-card:hover {
-            border: 1px solid rgba(57, 255, 20, 0.5);
+            border: 1px solid rgba(45, 212, 191, 0.45);
             box-shadow:
-                0 30px 60px -20px rgba(0, 0, 0, 0.8),
-                0 0 40px rgba(57, 255, 20, 0.2);
+                0 30px 60px -20px rgba(0, 0, 0, 0.7),
+                0 0 40px rgba(45, 212, 191, 0.18);
         }
         .project-card .card-glare {
             position: absolute;
             inset: 0;
             border-radius: inherit;
-            background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(57, 255, 20, 0.12), transparent 60%);
+            background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(45, 212, 191, 0.12), transparent 60%);
             opacity: 0;
             transition: opacity 0.3s ease;
             pointer-events: none;
@@ -219,36 +220,36 @@
         .skill-bar {
             width: 0;
             transition: width 1.5s ease-out;
-            background: linear-gradient(90deg, #39FF14 0%, #2dd910 100%);
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+            background: linear-gradient(90deg, #2DD4BF 0%, #14B8A6 100%);
+            box-shadow: 0 0 10px rgba(45, 212, 191, 0.4);
         }
 
         /* Button Styles */
         .btn-neon {
             background: transparent;
-            border: 2px solid #39FF14;
-            color: #39FF14;
+            border: 2px solid #2DD4BF;
+            color: #2DD4BF;
             position: relative;
             overflow: hidden;
             transition: all 0.3s;
         }
         
         .btn-neon:hover {
-            background: #39FF14;
-            color: #000000;
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+            background: #2DD4BF;
+            color: #0B1220;
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.45);
         }
 
         .btn-filled {
-            background: #39FF14;
-            color: #000000;
-            border: 2px solid #39FF14;
+            background: #2DD4BF;
+            color: #0B1220;
+            border: 2px solid #2DD4BF;
             font-weight: 600;
             transition: all 0.3s;
         }
         
         .btn-filled:hover {
-            box-shadow: 0 0 30px rgba(57, 255, 20, 0.8);
+            box-shadow: 0 0 28px rgba(45, 212, 191, 0.55);
             transform: translateY(-2px);
         }
 
@@ -276,7 +277,7 @@
             width: 0;
             height: 0;
             border-radius: 50%;
-            background: rgba(57, 255, 20, 0.3);
+            background: rgba(45, 212, 191, 0.3);
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
@@ -306,15 +307,15 @@
         }
     </style>
 </head>
-<body class="bg-black text-gray-200 font-sans overflow-x-hidden selection:bg-neon selection:text-black">
+<body class="bg-dark text-[#E8EEF7] font-sans overflow-x-hidden selection:bg-neon selection:text-dark">
 
     <!-- 3D Background Canvas -->
     <div id="canvas-container"></div>
 
     <!-- Atmospheric depth layer -->
-    <div class="depth-blob" style="width: 500px; height: 500px; top: -100px; left: -150px; background: radial-gradient(circle, #39FF14, transparent 70%);"></div>
-    <div class="depth-blob" style="width: 600px; height: 600px; top: 40%; right: -200px; background: radial-gradient(circle, #6610F2, transparent 70%); opacity: 0.2;"></div>
-    <div class="depth-blob" style="width: 450px; height: 450px; bottom: -150px; left: 20%; background: radial-gradient(circle, #39FF14, transparent 70%); opacity: 0.15;"></div>
+    <div class="depth-blob" style="width: 500px; height: 500px; top: -100px; left: -150px; background: radial-gradient(circle, #2DD4BF, transparent 70%);"></div>
+    <div class="depth-blob" style="width: 600px; height: 600px; top: 40%; right: -200px; background: radial-gradient(circle, #38BDF8, transparent 70%); opacity: 0.22;"></div>
+    <div class="depth-blob" style="width: 450px; height: 450px; bottom: -150px; left: 20%; background: radial-gradient(circle, #2DD4BF, transparent 70%); opacity: 0.15;"></div>
     <div class="grain-overlay"></div>
 
     <!-- Navigation -->
@@ -399,14 +400,14 @@
                 <div class="relative w-full h-[420px] md:h-[600px] flex items-center justify-center mt-8 md:mt-0">
                     <div class="relative w-64 h-64 md:w-80 md:h-80">
                         <!-- Conic gradient depth ring -->
-                        <div class="absolute -inset-3 rounded-full avatar-ring" style="background: conic-gradient(from 0deg, #39FF14, transparent 30%, transparent 70%, #6610F2, #39FF14); opacity: 0.25; filter: blur(8px); animation-duration: 12s;"></div>
+                        <div class="absolute -inset-3 rounded-full avatar-ring" style="background: conic-gradient(from 0deg, #2DD4BF, transparent 30%, transparent 70%, #38BDF8, #2DD4BF); opacity: 0.25; filter: blur(8px); animation-duration: 12s;"></div>
                         <!-- Rotating Rings -->
                         <div class="absolute inset-0 border-2 border-neon/30 rounded-full avatar-ring"></div>
                         <div class="absolute inset-4 border-2 border-neon/20 rounded-full avatar-ring" style="animation-direction: reverse; animation-duration: 15s;"></div>
                         <div class="absolute inset-8 border border-neon/10 rounded-full avatar-ring" style="animation-duration: 20s;"></div>
                         
                         <!-- Headshot -->
-                        <div class="absolute inset-10 md:inset-12 rounded-full overflow-hidden border-2 border-neon/40 shadow-[0_0_40px_rgba(57,255,20,0.15)]">
+                        <div class="absolute inset-10 md:inset-12 rounded-full overflow-hidden border-2 border-neon/40 shadow-[0_0_40px_rgba(45,212,191,0.2)]">
                             <img
                                 src="assets/daniel-oloyede.jpg"
                                 alt="Daniel Oloyede"
@@ -707,7 +708,7 @@
                 <!-- Project 1: Ledger & Lens -->
                 <div class="project-card glass rounded-2xl overflow-hidden border border-neon/10 relative"><div class="card-glare"></div>
                     <div class="grid md:grid-cols-2 gap-0">
-                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-surface to-dark flex items-center justify-center">
                             <div class="text-center p-8">
                                 <i class="fas fa-wallet text-6xl text-neon/50 mb-4"></i>
                                 <div class="text-neon font-mono text-sm">ML · Full-Stack</div>
@@ -784,7 +785,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-bl from-gray-900 to-black flex items-center justify-center order-1 md:order-2">
+                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-bl from-surface to-dark flex items-center justify-center order-1 md:order-2">
                             <div class="text-center p-8">
                                 <i class="fas fa-futbol text-6xl text-neon/50 mb-4"></i>
                                 <div class="text-neon font-mono text-sm">Analytics · React</div>
@@ -799,7 +800,7 @@
                 <!-- Project 3: Study Buddy -->
                 <div class="project-card glass rounded-2xl overflow-hidden border border-neon/10 relative"><div class="card-glare"></div>
                     <div class="grid md:grid-cols-2 gap-0">
-                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-surface to-dark flex items-center justify-center">
                             <div class="text-center p-8">
                                 <i class="fas fa-book-open text-6xl text-neon/50 mb-4"></i>
                                 <div class="text-neon font-mono text-sm">RAG · AI</div>
@@ -879,7 +880,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-bl from-gray-900 to-black flex items-center justify-center order-1 md:order-2">
+                        <div class="relative h-64 md:h-auto overflow-hidden bg-gradient-to-bl from-surface to-dark flex items-center justify-center order-1 md:order-2">
                             <div class="text-center p-8">
                                 <i class="fas fa-comments text-6xl text-neon/50 mb-4"></i>
                                 <div class="text-neon font-mono text-sm">RAG · Chatbot</div>
@@ -902,7 +903,7 @@
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- MillPresenter -->
                 <div class="project-card glass rounded-2xl overflow-hidden border border-neon/10 relative flex flex-col h-full"><div class="card-glare"></div>
-                    <div class="relative h-40 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center border-b border-neon/10">
+                    <div class="relative h-40 bg-gradient-to-br from-surface to-dark flex items-center justify-center border-b border-neon/10">
                         <i class="fas fa-video text-4xl text-neon/50"></i>
                         <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-neon/20 text-neon text-[10px] font-semibold border border-neon/30">Capstone</span>
                     </div>
@@ -931,7 +932,7 @@
 
                 <!-- RadarShop -->
                 <div class="project-card glass rounded-2xl overflow-hidden border border-neon/10 relative flex flex-col h-full"><div class="card-glare"></div>
-                    <div class="relative h-40 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center border-b border-neon/10">
+                    <div class="relative h-40 bg-gradient-to-br from-surface to-dark flex items-center justify-center border-b border-neon/10">
                         <i class="fas fa-shopping-cart text-4xl text-neon/50"></i>
                         <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-neon/20 text-neon text-[10px] font-semibold border border-neon/30">Android</span>
                     </div>
@@ -960,7 +961,7 @@
 
                 <!-- HomeSafe -->
                 <div class="project-card glass rounded-2xl overflow-hidden border border-neon/10 relative flex flex-col h-full"><div class="card-glare"></div>
-                    <div class="relative h-40 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center border-b border-neon/10">
+                    <div class="relative h-40 bg-gradient-to-br from-surface to-dark flex items-center justify-center border-b border-neon/10">
                         <i class="fas fa-home text-4xl text-neon/50"></i>
                         <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-neon/20 text-neon text-[10px] font-semibold border border-neon/30">IoT</span>
                     </div>
@@ -1012,11 +1013,11 @@
                 <!-- Timeline Item 1 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-black z-10 shadow-[0_0_10px_#39FF14]"></div>
+                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-dark z-10 shadow-[0_0_10px_#2DD4BF]"></div>
                     </div>
                     <div class="glass p-6 rounded-2xl md:w-5/12 md:ml-auto md:mr-[52%] border border-neon/10 hover:border-neon/30 transition-all">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">Present</span>
+                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">2022 - Apr 2026</span>
                         </div>
                         <h3 class="text-xl font-bold mb-1 text-white">Cybersecurity Club</h3>
                         <p class="text-neon text-sm mb-2">Volunteer & Active Member</p>
@@ -1027,11 +1028,11 @@
                 <!-- Timeline Item 2 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-black z-10 shadow-[0_0_10px_#39FF14]"></div>
+                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-dark z-10 shadow-[0_0_10px_#2DD4BF]"></div>
                     </div>
                     <div class="glass p-6 rounded-2xl md:w-5/12 md:mr-auto md:ml-[52%] border border-neon/10 hover:border-neon/30 transition-all">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">2022 - Present</span>
+                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">2022 - Apr 2026</span>
                         </div>
                         <h3 class="text-xl font-bold mb-1 text-white">Computer Science Club</h3>
                         <p class="text-neon text-sm mb-2">Active Member</p>
@@ -1042,11 +1043,11 @@
                 <!-- Timeline Item 3 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-black z-10 shadow-[0_0_10px_#39FF14]"></div>
+                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-dark z-10 shadow-[0_0_10px_#2DD4BF]"></div>
                     </div>
                     <div class="glass p-6 rounded-2xl md:w-5/12 md:ml-auto md:mr-[52%] border border-neon/10 hover:border-neon/30 transition-all">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">2022 - Present</span>
+                            <span class="px-3 py-1 rounded-full bg-neon/10 text-neon text-xs font-semibold border border-neon/20">2022 - Apr 2026</span>
                         </div>
                         <h3 class="text-xl font-bold mb-1 text-white">Game Development Club</h3>
                         <p class="text-neon text-sm mb-2">Member & Participant</p>
@@ -1057,7 +1058,7 @@
                 <!-- Timeline Item 4 -->
                 <div class="relative">
                     <div class="flex items-center justify-center mb-4">
-                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-black z-10 shadow-[0_0_10px_#39FF14]"></div>
+                        <div class="w-4 h-4 bg-neon rounded-full border-4 border-dark z-10 shadow-[0_0_10px_#2DD4BF]"></div>
                     </div>
                     <div class="glass p-6 rounded-2xl md:w-5/12 md:mr-auto md:ml-[52%] border border-neon/10 hover:border-neon/30 transition-all">
                         <div class="flex items-center gap-2 mb-2">
@@ -1291,15 +1292,15 @@
                     <form class="space-y-4" id="contact-form">
                         <div>
                             <label class="block text-sm font-medium mb-2 text-gray-300">Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-black border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600" placeholder="Your Name" required>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-surface border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600" placeholder="Your Name" required>
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2 text-gray-300">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-black border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600" placeholder="you@company.com" required>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-surface border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600" placeholder="you@company.com" required>
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2 text-gray-300">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-black border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600 resize-none" placeholder="Tell me about your opportunity..." required></textarea>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-surface border border-neon/20 focus:border-neon focus:outline-none transition-colors text-white placeholder-gray-600 resize-none" placeholder="Tell me about your opportunity..." required></textarea>
                         </div>
                         <button type="submit" class="w-full py-4 btn-filled rounded-xl font-semibold transition-all transform hover:scale-[1.02] btn-particle">
                             Send Message <i class="fas fa-paper-plane ml-2"></i>
@@ -1363,7 +1364,7 @@
 
         typeWriter();
 
-        // 3D Background Animation - Neon Green Particles
+        // 3D Background Animation - Midnight Teal Particles
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -1382,9 +1383,9 @@
                 Math.random() * 2000 - 1000
             );
 
-            // Neon green color variation
+            // Teal / sky color variation
             const color = new THREE.Color();
-            color.setHSL(0.3 + Math.random() * 0.1, 1, 0.5);
+            color.setHSL(0.48 + Math.random() * 0.08, 0.75, 0.55);
             colors.push(color.r, color.g, color.b);
         }
 
